@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration Page</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+		font-family: Arial;
+		box-sizing: border-box;
+	}
+	body{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		background-size: cover;
+		background-image: url(lmb1.jpg);
+	}
+	.container{
+		max-width: 650px;
+		padding: 28px;
+		margin: 0 28px;
+		border-radius: 10px;
+		overflow: hidden;
+		background: rgba(255,255,255,.2);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 1.0);
+	}
+	h1{
+		font-size: 25px;
+		font-weight: bold;
+		text-align: left;
+		color: #fff;
+		padding-bottom: 8px;
+		border-bottom: 1px solid silver ;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+	}
+	.content{
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 20px 0;
+	}
+	.input-box{
+		display: flex;
+		flex-wrap: wrap;
+		width: 50%;
+		padding-bottom: 15px;
+	}
+	.input-box:nth-child(2n){
+		justify-content: end;
+	}
+	.input-box label, .gender-title{
+		width: 95%;
+		color: #fff;
+		font-weight: bold;
+		margin: 5px 0;
+	}
+	.gender-title{
+		font-size: 16px;
+	}
+	.input-box input{
+		height: 40px;
+		width: 95%;
+		padding: 0 10px;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		outline: none;
+	}
+	.input-box input:is(:focus,:valid){
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+	}
+	.gender-category label{
+		padding: 0 20px 0 5px;
+		font-size: 15px;
+	}
+	.gender-category{
+		color: gainsboro;
+	}
+	.gender-category label, .gender-category input{
+		cursor: pointer;
+	}
+	.alert p{
+		font-size: 15px;
+		font-style: italic;
+		color: #fff;
+		margin: 5px 0;
+		padding: 10px;
+		line-height: 1.5;
+	}
+	.alert a{
+		font-weight: bold;
+		text-decoration: none;
+		color: skyblue;
+	}
+	.alert a:hover{
+		font-weight: bold;
+		text-decoration: underline;
+		color: yellow;
+	}
+	.button-container{
+		margin: 15px 0;
+	}
+	.button-container button{
+		width: 100%;
+		margin-top: 10px;
+		padding: 10px;
+		display: block;
+		font-size: 20px;
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+		background-image: linear-gradient(to right,white,black);
+		cursor: pointer;
+		transition: 0.3s;
+	}
+	.button-container button:hover{
+		background-image: linear-gradient(to right,black,white) ;
+	}
+	@media(max-width600px){
+		.container{
+			min-width: 300px;
+		}
+		.content{
+			max-height: 390px;
+			overflow: auto;
+		}
+		.input-box{
+			margin-bottom: 12px;
+			width: 100%;
+		}
+		.input-box:nth-child(2n){
+			justify-content: space-between;
+		}
+		.gender-category{
+			display: flex;
+			justify-content: space-between;
+			width: 60%;
+		}
+		.content::webkit-scrollbar{
+			width: 0;
+		}
+	}
+</style>
+<body>
+	<div class="container">
+		<form action="" method="post">
+			<h1>Registration</h1>
+				<div class="content">
+					<div class="input-box">
+						<label for="name">Full Name</label>
+						<input type="text" placeholder="Enter Full name" name="name" required>
+					</div>
+					<div class="input-box">
+						<label for="username">Username</label>
+						<input type="text" placeholder="Enter Username" name="uname" required>
+					</div>
+					<div class="input-box">
+						<label for="eamil">Email</label>
+						<input type="text" placeholder="Enter your valid Email" name="email" required>
+					</div>
+					<div class="input-box">
+						<label for="number">Phone Number</label>
+						<input type="text" placeholder="Enter phone number" name="number" required>
+					</div>
+					<div class="input-box">
+						<label for="password">Password</label>
+						<input type="text" placeholder="Enter New Password" name="password" required>
+					</div>
+					<div class="input-box">
+						<label for="confirm-password">Confirm Password</label>
+						<input type="text" placeholder="Confirm your password" name="confirmPassword" required>
+					</div>
+					<span class="gender-title">Gender</span>
+					<div class="gender-category">
+						<input type="radio" name="gender" id="male">
+						<label for="male">Male</label>
+						<input type="radio" name="gender" id="female">
+						<label for="female">Female</label>
+						<input type="radio" name="gender" id="other">
+						<label for="other">Other</label>
+				</div>
+			</div>
+			<div class="alert">
+				<p>By clicking Sign up, you agree to our<a href="#"> Terms,</a><a href="#"> Privacy Policy </a> and <a href="#">Cookies Policy.</a> You may receive SMS notification from us and can opt out any time.</p>
+			</div>
+			<div class="button-container">
+				<button type="submit">Register</button>
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>

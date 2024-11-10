@@ -1,0 +1,15 @@
+.frak{
+	height: 100px;
+	border-radius: 50%;
+	width: 100px;
+	background-color: lightskyblue;
+	text-align: center;
+	align-content: center;
+	align-items: center;
+}
+.frak .icn{
+	font-size: 50px;
+	color: lightblue;
+
+
+}
